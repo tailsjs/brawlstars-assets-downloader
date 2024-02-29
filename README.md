@@ -5,19 +5,19 @@ The greatest assets downloader.
 1. Install [NodeJS](https://nodejs.org/)
 2. Download/clone repository.
 3. Type in terminal `npm install`
-4. Fill `config.json` with your data.
+4. Change `config.json` if you feel so.
 5. `node index`
 
 ## `config.json`
 ```json
 {
-    "BASE_URI": "https://game-assets.brawlstarsgame.com/",
-    "currentHash": "d1b6ae1d4b32011d65474410d41b91879d53e881",
+    "IP": "game.brawlstarsgame.com",
+    "PORT": 9339,
     "downloadOnlyNewFiles": true
 }
 ```
-* `BASE_URI` - Patcher URI
-* `currentHash` - Hash from `fingerprint.json`
+* `IP` - Game IP
+* `PORT` - Game port
 * `downloadOnlyNewFiles` - Download only files, that have newer version (you need to put your own fingerprint)
 
 ## TODO

@@ -1,5 +1,12 @@
 {
-    "BASE_URI": "https://game-assets.brawlstarsgame.com/",
-    "currentHash": "d1b6ae1d4b32011d65474410d41b91879d53e881",
-    "downloadOnlyNewFiles": true
+    "IP": "game.brawlstarsgame.com",
+    "PORT": 9339,
+    "downloadOnlyNewFiles": true,
+    "clientHelloData": {
+        "keyVersion": 43,
+        "major": 54,
+        "minor": 243,
+        "build": 1,
+        "hash": "0ebb99eae8cad32825efc87c7a33054796d286ac"
+    }
 }
