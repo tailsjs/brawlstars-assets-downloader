@@ -17,7 +17,7 @@ let host = ""
 
 client.connect(PORT, IP, function() { // Connecting to the game, sending ClientHello
     console.log("Downloading fingerprint...")
-	console.log(`Connected to ${IP}:${PORT}`)
+	  console.log(`Connected to ${IP}:${PORT}`)
 
     SendClientHello()
 });
@@ -81,8 +81,18 @@ async function downloadAssets () { // Downloading assets after fingerprint fetch
     await writeFile(`./${version}/fingerprint.json`, JSON.stringify(fingerprintJson, null, 4))
 
     console.log("Fingerprint downloaded. Fingerprint version: " + version)
-    const files = downloadOnlyNewFiles ? fingerprintJson.files.filter((e, i) => e.sha != oldFingerprint.files[i].sha) : fingerprintJson.files
 
+    const files = downloadOnlyNewFiles ? fingerprintJson.files.filter((e, i) => {
+      const oldFileIndex = oldFingerprint.files.findIndex(j => j.file == e.file)
+
+      if (oldFileIndex === -1) {
+        console.log(`New file - "${e.file}"!`)
+        return true
+      }
+
+      return e.sha != oldFingerprint.files[oldFileIndex].sha
+    }) : fingerprintJson.files
+    
     for (const file of files) {
         const response = await fetch(`${host}/${hash}/${file.file}`)
         

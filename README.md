@@ -13,12 +13,25 @@ The greatest assets downloader.
 {
     "IP": "game.brawlstarsgame.com",
     "PORT": 9339,
-    "downloadOnlyNewFiles": true
+    "downloadOnlyNewFiles": true,
+    "clientHelloData": {
+        "keyVersion": 43,
+        "major": 54,
+        "minor": 277,
+        "build": 1,
+        "hash": "abc428e9f4f14fcf7c82bd69b4e56bd1c4a0b951"
+    }
 }
 ```
 * `IP` - Game IP
 * `PORT` - Game port
-* `downloadOnlyNewFiles` - Download only files, that have newer version (you need to put your own fingerprint)
+* `downloadOnlyNewFiles` - Download only files, that have newer version, or doesn't exist in old fingerprint
+* `clientHelloData` - Some data for 10100 packet.
+* `clientHelloData.keyVersion` - Current Brawl Stars Pepper Crypto Key
+* `clientHelloData.major` - Game major
+* `clientHelloData.minor` - Game minor
+* `clientHelloData.build` - Game build (not necessary to change)
+* `clientHelloData.hash` - Old fingerprint hash
 
 ## TODO
 * Multithreading

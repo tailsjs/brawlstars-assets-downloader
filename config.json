@@ -5,8 +5,8 @@
     "clientHelloData": {
         "keyVersion": 43,
         "major": 54,
-        "minor": 243,
+        "minor": 277,
         "build": 1,
-        "hash": "0ebb99eae8cad32825efc87c7a33054796d286ac"
+        "hash": "abc428e9f4f14fcf7c82bd69b4e56bd1c4a0b951"
     }
 }
